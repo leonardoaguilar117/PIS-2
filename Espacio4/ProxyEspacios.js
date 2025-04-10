@@ -1,32 +1,32 @@
 class ProxyEspacios extends CRUD_Espacios {
-    constructor(espacioReal) {
+    constructor(espacio) {
         super();
-        this.espacioReal = espacioReal;
+        this.espacio = espacio;
     }
 
     crear(espacio) {
-        return this.espacioReal.crear(espacio);
+        return this.espacio.crear(espacio);
     }
 
     leer(id) {
-        return this.espacioReal.leer(id);
+        return this.espacio.leer(id);
     }
 
     actualizar(id, datos) {
-        return this.espacioReal.actualizar(id, datos);
+        return this.espacio.actualizar(id, datos);
     }
 
     eliminar(id) {
-        return this.espacioReal.eliminar(id);
+        return this.espacio.eliminar(id);
     }
 
     estaDisponible(idEspacio, horario) {
-        const horariosOcupados = this.espacioReal.getHorariosOcupados(idEspacio);
+        const horariosOcupados = this.espacio.getHorariosOcupados(idEspacio);
         return !horariosOcupados.includes(horario);
     }
 
     listarPorTipo(tipo) {
-        return Array.from(this.espacioReal.espacios.values())
+        return Array.from(this.espacio.espacios.values())
             .filter(espacio => espacio.tipo === tipo);
     }
 }

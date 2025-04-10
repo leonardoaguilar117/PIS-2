@@ -1,11 +1,24 @@
-class Insumo {
-    constructor(id, nombre, cantidad) {
+class Insumo extends Inventario {
+    constructor(id, nombre, tipo, ubicacion) {
+        super();
         this.id = id;
         this.nombre = nombre;
-        this.cantidad = cantidad;
+        this.tipo = tipo;
+        this.ubicacion = ubicacion;
+        this.cantidad = 0;
     }
 
-    info() {
-        return `${this.nombre} (ID: ${this.id}) - Stock: ${this.cantidad}`;
+    actualizarCantidad(cantidad) {
+        this.cantidad += cantidad;
+        console.log(`🔄 ${this.nombre}: ${this.cantidad} unidades`);
+    }
+
+    mostrarDetalles() {
+        console.log(
+            `📌 ${this.id} | ${this.nombre}\n` +
+            `Tipo: ${this.tipo}\n` +
+            `Ubicación: ${this.ubicacion}\n` +
+            `Stock: ${this.cantidad}\n${'-'.repeat(30)}`
+        );
     }
 }

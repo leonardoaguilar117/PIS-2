@@ -1,3 +1,4 @@
+// === Reservas ===
 class ReservaEspacios {
     constructor(proxyEspacios) {
         this.proxyEspacios = proxyEspacios;
@@ -19,7 +20,7 @@ class ReservaEspacios {
             console.log(`Horario ${horario} no disponible para ${idEspacio}.`);
             return false;
         }
-        this.proxyEspacios.espacioReal.asignarHorario(idEspacio, horario);
+        this.proxyEspacios.espacio.asignarHorario(idEspacio, horario);
         return this.reservar(idEspacio, usuario);
     }
 

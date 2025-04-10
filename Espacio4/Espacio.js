@@ -1,5 +1,4 @@
-// === Implementación real ===
-class EspacioReal extends CRUD_Espacios {
+class Espacio extends CRUD_Espacios {
     constructor() {
         super();
         this.espacios = new Map();

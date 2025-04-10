@@ -1,7 +1,7 @@
 class GestorEspacios {
     constructor() {
-        const espacioReal = new EspacioReal();
-        this.proxy = new ProxyEspacios(espacioReal);
+        const espacio = new Espacio();
+        this.proxy = new ProxyEspacios(espacio);
         this.reservas = new ReservaEspacios(this.proxy);
     }
 
@@ -11,9 +11,9 @@ class GestorEspacios {
     }
 
     mostrarDisponibles() {
-        const espacios = Array.from(this.proxy.espacioReal.espacios.values())
+        const espacios = Array.from(this.proxy.espacio.espacios.values())
             .filter(espacio => !espacio.reservado);
-        console.log("📋 Espacios disponibles:");
+        console.log(" Espacios disponibles:");
         espacios.forEach(espacio => console.log(`- ${espacio.id} (${espacio.tipo})`));
     }
 
