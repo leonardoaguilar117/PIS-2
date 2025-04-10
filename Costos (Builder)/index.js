@@ -1,2 +1,2 @@
 const cliente = new Cliente();
-cliente.calcularCostos();
+cliente.probarSistema();

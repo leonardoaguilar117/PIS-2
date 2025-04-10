@@ -1,6 +1,11 @@
 class ConstConcreto_CostoPlatillo extends ConstructorCosto {
-    construirBase() {
-        this.costo.base = 25; // Costo base de preparación
+    construirCostoPlatillo(base = 25) {
+        this.reset();
+        this.costo.tipo = "Platillo";
+        this.costo.base = base;
+        this.construirImpuestos();
+        this.construirExtras();
+        return this;
     }
 
     construirImpuestos() {
@@ -8,6 +13,10 @@ class ConstConcreto_CostoPlatillo extends ConstructorCosto {
     }
 
     construirExtras() {
-        this.costo.extras.push(5); // Costo extra por presentación
+        this.costo.extras.push(5); // Costo presentación
+    }
+
+    obtenerCostoPlatillo() {
+        return this.getResultado();
     }
 }

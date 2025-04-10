@@ -3,19 +3,28 @@ class Cliente {
         this.gestor = new GestorCosto(new ConstConcreto_CostoAlimento());
     }
 
-    calcularCostos() {
-        const builders = [
-            new ConstConcreto_CostoAlimento(),
-            new ConstConcreto_CostoPlatillo(),
-            new ConstConcreto_CostoPromocion(),
-            new ConstConcreto_CostoInsumo()
-        ];
+    probarSistema() {
+        console.log("=== Costos ===");
 
-        console.log("=== CÁLCULO DE COSTOS ===");
-        builders.forEach(builder => {
-            this.gestor.cambiarBuilder(builder);
-            const costo = this.gestor.construirCostoCompleto();
-            console.log(`${builder.constructor.name.replace('ConstConcreto_', '')}: $${costo.calcularCosto().toFixed(2)}`);
-        });
+        // Construcción encadenada
+        const costoAlimento = new ConstConcreto_CostoAlimento()
+            .construirCostoAlimento(18)
+            .obtenerCostoAlimento();
+        costoAlimento.mostrarCosto();
+
+        const costoPlatillo = new ConstConcreto_CostoPlatillo()
+            .construirCostoPlatillo(30)
+            .obtenerCostoPlatillo();
+        costoPlatillo.mostrarCosto();
+
+        const costoPromo = new ConstConcreto_CostoPromocion()
+            .construirCostoPromocion(40, 10)
+            .obtenerCostoPromocion();
+        costoPromo.mostrarCosto();
+
+        const costoInsumo = new ConstConcreto_CostoInsumo()
+            .construirCostoInsumo(10)
+            .obtenerCostoInsumo();
+        costoInsumo.mostrarCosto();
     }
 }

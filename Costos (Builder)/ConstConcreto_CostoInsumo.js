@@ -1,6 +1,11 @@
 class ConstConcreto_CostoInsumo extends ConstructorCosto {
-    construirBase() {
-        this.costo.base = 8; // Costo de insumos básicos
+    construirCostoInsumo(base = 8) {
+        this.reset();
+        this.costo.tipo = "Insumo";
+        this.costo.base = base;
+        this.construirImpuestos();
+        this.construirExtras();
+        return this;
     }
 
     construirImpuestos() {
@@ -8,6 +13,10 @@ class ConstConcreto_CostoInsumo extends ConstructorCosto {
     }
 
     construirExtras() {
-        this.costo.extras.push(2); // Costo de empaque
+        this.costo.extras.push(2); // Empaque
+    }
+
+    obtenerCostoInsumo() {
+        return this.getResultado();
     }
 }

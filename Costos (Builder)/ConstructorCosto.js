@@ -12,6 +12,10 @@ class ConstructorCosto {
     construirDescuentos() { throw new Error("Método abstracto") }
     construirExtras() { throw new Error("Método abstracto") }
 
+    obtenerCosto() {
+        return this.costo;
+    }
+
     getResultado() {
         return this.costo;
     }

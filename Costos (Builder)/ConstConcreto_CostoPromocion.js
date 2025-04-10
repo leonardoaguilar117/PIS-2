@@ -1,9 +1,13 @@
 class ConstConcreto_CostoPromocion extends ConstructorCosto {
-    construirBase() {
-        this.costo.base = 30;
+    construirCostoPromocion(base = 30, descuento = 7) {
+        this.reset();
+        this.costo.tipo = "Promoción";
+        this.costo.base = base;
+        this.costo.descuentos = descuento;
+        return this;
     }
 
-    construirDescuentos() {
-        this.costo.descuentos = 7; // Descuento promocional
+    obtenerCostoPromocion() {
+        return this.getResultado();
     }
 }

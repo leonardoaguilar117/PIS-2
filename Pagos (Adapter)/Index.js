@@ -2,9 +2,9 @@ console.log("===== Pagos cafeteria =====");
 const gestor = new GestorPago();
 
 // Pagos de prueba
-gestor.realizarPago('efectivo', 1500);
-gestor.realizarPago('tarjeta', 3200, { numeroTarjeta: '4111111111111111' });
-gestor.realizarPago('paypal', 875, { email: 'edgar.sotelo@cua.uam.com' });
+gestor.realizarPago('efectivo', 15);
+gestor.realizarPago('tarjeta', 300, { numeroTarjeta: '41213211456731' });
+gestor.realizarPago('paypal', 85, { email: 'edgar.sotelo@cua.uam.com' });
 
 // Listar pagos
 gestor.listarPagos();
