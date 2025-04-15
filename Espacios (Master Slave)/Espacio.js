@@ -1,6 +1,5 @@
-class Espacio extends CRUD_Espacios {
+class Espacio {
     constructor() {
-        super();
         this.espacios = new Map();
         this.horarios = new Map();
     }
@@ -37,5 +36,14 @@ class Espacio extends CRUD_Espacios {
 
     getHorariosOcupados(idEspacio) {
         return this.horarios.get(idEspacio) || [];
+    }
+
+    estaDisponible(idEspacio, horario) {
+        const ocupados = this.getHorariosOcupados(idEspacio);
+        return !ocupados.includes(horario);
+    }
+
+    listarPorTipo(tipo) {
+        return Array.from(this.espacios.values()).filter(e => e.tipo === tipo);
     }
 }

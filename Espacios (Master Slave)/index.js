@@ -1,3 +1,4 @@
+// === Ejecución ===
 const gestor = new GestorEspacios();
 
 gestor.agregarEspacio("A1", "Asiento");
