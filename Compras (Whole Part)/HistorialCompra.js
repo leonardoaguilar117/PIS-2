@@ -1,3 +1,4 @@
+
 class HistorialCompra {
     constructor() {
         this.compras = [];
