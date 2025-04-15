@@ -1,8 +1,7 @@
-const cliente = new Cliente();
-
 console.log("=== Menú Principal ===");
-cliente.verMenu();
+let menu = new Menu(new IMenuPlatillo());
+menu.mostrarMenuFormateado();
 
 console.log("\n=== Menú Alternativo ===");
-cliente.cambiarMenu('alimentos');
-cliente.verMenu();
+menu = new Menu(new IMenuAlimentos());
+menu.mostrarMenuFormateado();
