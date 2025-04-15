@@ -1,3 +1,4 @@
+// Gestores
 class GestorCuentas {
     constructor(fabrica) {
         this.fabrica = fabrica;

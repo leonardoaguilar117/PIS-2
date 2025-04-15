@@ -5,7 +5,6 @@ class CuentaAdministrador extends Cuenta {
         this.usuariosRegistrados = [];
     }
 
-    // Métodos
     agregarUsuario(nombreUsuario, tipo) {
         this.usuariosRegistrados.push({ nombre: nombreUsuario, tipo });
         console.log(`👤 Admin ${this.nombre} agregó a ${nombreUsuario} (${tipo}).`);

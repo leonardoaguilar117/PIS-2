@@ -2,7 +2,7 @@ class DecoradorComida extends DecoradorServicios {
     constructor(servicio, platillo = "Sandwich") {
         super(servicio);
         this.platillo = platillo;
-        this.costoPlatillo = 7.00;
+        this.costoPlatillo = 18.00;
     }
 
     obtenerDescripcion() {

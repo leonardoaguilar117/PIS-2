@@ -1,4 +1,4 @@
-console.log("===== SISTEMA CAFETERIA UAM-C =====");
+console.log("===== AUTENTICACION-CUENTAS (Abstract Factory) =====");
 
 // 1. Configuración inicial
 const fabricaAdmin = new FabricaCuentaAdministrador();

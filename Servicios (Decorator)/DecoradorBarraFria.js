@@ -12,4 +12,5 @@ class DecoradorBarraFria extends DecoradorServicios {
     calcularCosto() {
         return this.servicio.calcularCosto() + this.costoBebida;
     }
+
 }

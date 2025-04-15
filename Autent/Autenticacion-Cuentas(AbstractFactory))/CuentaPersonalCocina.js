@@ -1,4 +1,3 @@
-
 class CuentaPersonalCocina extends Cuenta {
     constructor(nombre) {
         super("Personal Cocina", nombre);
@@ -6,7 +5,6 @@ class CuentaPersonalCocina extends Cuenta {
         this.inventario = { Sandwiches: 10, Hamburguesa: 15, Ensalada: 8 };
     }
 
-    // Métodos
     verOrdenes() {
         console.log(`📦 Órdenes pendientes:`);
         this.ordenesPendientes.forEach((orden, index) =>

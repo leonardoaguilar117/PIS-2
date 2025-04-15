@@ -4,7 +4,6 @@ class CuentaUsuario extends Cuenta {
         this.pedidos = [];
     }
 
-    // Métodos
     verMenu(menu) {
         console.log(`📜 ${this.nombre} está viendo el menú:`);
         menu.forEach((item, index) => console.log(`${index + 1}. ${item}`));
