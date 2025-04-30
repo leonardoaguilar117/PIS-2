@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "roboto";
+    margin: 0;
+}
+
+:root {
+    --verde: #88b376;
+    --naranja: #f7a53d;
+    --black: #000000;
+}
+
+#divDerecha {
+    padding-top: 400px;
+    width: 350px;
+    height: 920px;
+    background-color: var(--verde);
+    position: fixed;
+    left: 1650px;
+}
+
+#divDerecha h1 {
+    font-size: 45px;
+    color: white;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+}
+
+#contenedorlogin {
+    z-index: -1;
+    width: 900px;
+    height: 500px;
+    background-color: rgb(207, 207, 201);
+    position: fixed;
+    top: 230px;
+    left: 390px;
+    padding: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    position: relative;
+}
+
+input {
+    background-color: rgb(141, 139, 139);
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    width: 580px;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#usuario {
+    width: 270px;
+    height: 190px;
+    position: fixed;
+    top: 130px;
+    left: 700px;
+
+}
+
+#contenedorInputs {
+    margin-left: 100px;
+    margin-top: 40px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    height: 60px;
+    background-color: var(--naranja);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#google {
+    width: 100px;
+    height: 100px;
+}
